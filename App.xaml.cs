@@ -43,6 +43,13 @@ namespace ControlCenter
         {
             m_window = new MainWindow();
             m_window.Activate();
+
+            // Use 'this' rather than 'window' as variable if this is about the current window.
+            IntPtr hWnd = WinRT.Interop.WindowNative.GetWindowHandle(m_window);
+            var windowId = Microsoft.UI.Win32Interop.GetWindowIdFromWindow(hWnd);
+            var appWindow = Microsoft.UI.Windowing.AppWindow.GetFromWindowId(windowId);
+
+            appWindow.Resize(new Windows.Graphics.SizeInt32 { Width = 480, Height = 800 }); // Set initial window size
         }
 
         private Window? m_window;
