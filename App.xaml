@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application
+    x:Class="ControlCenter.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ControlCenter">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
+                <!-- Other merged dictionaries here -->
+            </ResourceDictionary.MergedDictionaries>
+            <!-- Other app resources here -->
+            <FontFamily x:Key="Regular">/Assets/SF-Pro.ttf#SF Pro Regular</FontFamily>
+            <FontFamily x:Key="Bold">/Assets/SF-Pro.ttf#SF Pro Bold</FontFamily>
+            <FontFamily x:Key="Heavy">/Assets/SF-Pro.ttf#SF Pro Heavy</FontFamily>
+            <FontFamily x:Key="Medium">/Assets/SF-Pro.ttf#SF Pro Medium</FontFamily>
+            <FontFamily x:Key="Light">/Assets/SF-Pro.ttf#SF Pro Light</FontFamily>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

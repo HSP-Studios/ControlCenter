@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "ControlCenter (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "ControlCenter (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
