@@ -3,4 +3,3 @@
 
 # Manually add detectable files to linguist
 *.xaml linguist-detectable
-* linguist-detectable
