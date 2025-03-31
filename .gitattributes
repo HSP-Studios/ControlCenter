@@ -1,5 +1,6 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 
-# Manually add detectable files to linguist
+# Configure linguist
 *.xaml linguist-detectable
+*.xaml linguist-language=XAML
