@@ -3,4 +3,3 @@
 
 # Configure linguist
 *.xaml linguist-detectable
-*.xaml linguist-language=XAML
