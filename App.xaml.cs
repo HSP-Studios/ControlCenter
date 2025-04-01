@@ -49,7 +49,7 @@ namespace ControlCenter
             var windowId = Microsoft.UI.Win32Interop.GetWindowIdFromWindow(hWnd);
             var appWindow = Microsoft.UI.Windowing.AppWindow.GetFromWindowId(windowId);
 
-            appWindow.Resize(new Windows.Graphics.SizeInt32 { Width = 480, Height = 800 }); // Set initial window size
+            appWindow.Resize(new Windows.Graphics.SizeInt32 { Width = 1200, Height = 800 }); // Set initial window size
         }
 
         private Window? m_window;
