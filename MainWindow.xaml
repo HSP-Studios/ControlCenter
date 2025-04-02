@@ -45,35 +45,35 @@
                             IsBackButtonVisible="Collapsed">
                 <NavigationView.MenuItems>
                     <NavigationViewItem Content="Home" Tag="Home" Icon="Home" ToolTipService.ToolTip="Home" />
-                    <NavigationViewItem Content="Apps" Tag="Apps" ToolTipService.ToolTip="Apps">
+                    <NavigationViewItem Content="Apps" Tag="Apps" ToolTipService.ToolTip="Apps" IsEnabled="False">
                         <NavigationViewItem.Icon>
                             <FontIcon Glyph="&#xECAA;" />
                         </NavigationViewItem.Icon>
                     </NavigationViewItem>
-                    <NavigationViewItem Content="Games" Tag="Games" ToolTipService.ToolTip="Games">
+                    <NavigationViewItem Content="Games" Tag="Games" ToolTipService.ToolTip="Games" IsEnabled="False">
                         <NavigationViewItem.Icon>
                             <FontIcon Glyph="&#xE7FC;" />
                         </NavigationViewItem.Icon>
                     </NavigationViewItem>
-                    <NavigationViewItem Content="Vault" Tag="Vault" ToolTipService.ToolTip="Vault">
+                    <NavigationViewItem Content="Vault" Tag="Vault" ToolTipService.ToolTip="Vault" IsEnabled="False">
                         <NavigationViewItem.Icon>
                             <FontIcon Glyph="&#xE8B7;" />
                         </NavigationViewItem.Icon>
                     </NavigationViewItem>
-                    <NavigationViewItem Content="Accounts" Tag="Accounts" Icon="People" ToolTipService.ToolTip="Accounts" />
-                    <NavigationViewItem Content="Browser" Tag="Browser" SelectsOnInvoked="True" ToolTipService.ToolTip="Browser">
+                    <NavigationViewItem Content="Accounts" Tag="Accounts" Icon="People" ToolTipService.ToolTip="Accounts" IsEnabled="False" />
+                    <NavigationViewItem Content="Browser" Tag="Browser" ToolTipService.ToolTip="Browser" IsEnabled="False">
                         <NavigationViewItem.Icon>
                             <FontIcon Glyph="&#xF6FA;" />
                         </NavigationViewItem.Icon>
                     </NavigationViewItem>
                 </NavigationView.MenuItems>
                 <NavigationView.FooterMenuItems>
-                    <NavigationViewItem Content="Settings" Tag="Settings" ToolTipService.ToolTip="Settings">
+                    <NavigationViewItem Content="Settings" Tag="Settings" ToolTipService.ToolTip="Settings" IsEnabled="False">
                         <NavigationViewItem.Icon>
                             <FontIcon Glyph="&#xE713;" />
                         </NavigationViewItem.Icon>
                     </NavigationViewItem>
-                    <NavigationViewItem Content="Help" Tag="Help" Icon="Help" ToolTipService.ToolTip="Help" />
+                    <NavigationViewItem Content="Help" Tag="Help" Icon="Help" ToolTipService.ToolTip="Help"  IsEnabled="False"/>
                 </NavigationView.FooterMenuItems>
                 <Frame x:Name="ContentFrame">
                     <Frame.ContentTransitions>
