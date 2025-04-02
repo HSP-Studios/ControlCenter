@@ -88,13 +88,22 @@
             <!-- Additional Buttons -->
             <StackPanel Grid.Column="2" Orientation="Horizontal" Spacing="8">
                 <Button Width="40" Height="40">
-                    <FontIcon  Glyph="&#xE897;"/>
+                    <FontIcon Glyph="&#xE734;" FontSize="15"/>
+                    <ToolTipService.ToolTip>
+                        <ToolTip Content="Bookmarks"/>
+                    </ToolTipService.ToolTip>
                 </Button>
                 <Button Width="40" Height="40">
-                    <FontIcon  Glyph="&#xE897;"/>
+                    <FontIcon Glyph="&#xE80F;" FontSize="15"/>
+                    <ToolTipService.ToolTip>
+                        <ToolTip Content="Home"/>
+                    </ToolTipService.ToolTip>
                 </Button>
                 <Button Width="40" Height="40">
-                    <FontIcon  Glyph="&#xE897;"/>
+                    <FontIcon Glyph="&#xE713;" FontSize="15"/>
+                    <ToolTipService.ToolTip>
+                        <ToolTip Content="Settings"/>
+                    </ToolTipService.ToolTip>
                 </Button>
             </StackPanel>
         </Grid>
