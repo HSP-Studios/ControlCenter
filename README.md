@@ -1,5 +1,5 @@
 # ControlCenter
 
-ControlCenter is actively being developed.
+Currently being split into multiple apps.
 
-You can contribute to ControlCenter here: [Discord Server](https://discord.gg/qG75UuW4jY)
+You can contribute here: [Discord Server](https://discord.gg/qG75UuW4jY)
