@@ -16,9 +16,9 @@
             HorizontalAlignment="Left" 
             VerticalAlignment="Top"
             HorizontalScrollMode="Disabled" 
-            HorizontalScrollBarVisibility="Hidden"
+            HorizontalScrollBarVisibility="Auto"
             VerticalScrollMode="Enabled" 
-            VerticalScrollBarVisibility="Hidden">
+            VerticalScrollBarVisibility="Auto">
 
             <StackPanel x:Name="MainContentPanel" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,70,0,0">
                 <TextBlock FontFamily="{StaticResource Bold}" FontSize="80" Text="{x:Bind GreetingText}"/>

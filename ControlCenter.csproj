@@ -13,7 +13,7 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
-    <Content Remove="Assets\SF-Pro.ttf" />
+    <Content Remove="ms-appx:///Assets/SF-Pro.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="AccountsPage.xaml" />

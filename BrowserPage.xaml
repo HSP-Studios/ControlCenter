@@ -7,10 +7,127 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:controls="using:Microsoft.UI.Xaml.Controls"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    mc:Ignorable="d">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Navigation Controls Row -->
+        <Grid Grid.Row="0" Padding="10" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <!-- Navigation Buttons -->
+                <ColumnDefinition Width="*"/>
+                <!-- URL Bar -->
+                <ColumnDefinition Width="Auto"/>
+                <!-- Additional Buttons -->
+            </Grid.ColumnDefinitions>
+
+            <!-- Navigation Buttons -->
+            <StackPanel Grid.Column="0" Orientation="Horizontal" Spacing="8">
+                <Button x:Name="BackButton" Width="40" Height="40" Click="BackButton_Click">
+                    <FontIcon FontSize="15" Glyph="&#xE72B;"/>
+                    <ToolTipService.ToolTip>
+                        <ToolTip Content="Back"/>
+                    </ToolTipService.ToolTip>
+                </Button>
+                <Button x:Name="ForwardButton" Width="40" Height="40" Click="ForwardButton_Click">
+                    <FontIcon FontSize="15" Glyph="&#xE72A;"/>
+                    <ToolTipService.ToolTip>
+                        <ToolTip Content="Forward"/>
+                    </ToolTipService.ToolTip>
+                </Button>
+                <Button x:Name="ReloadButton" Width="40" Height="40" Click="ReloadButton_Click">
+                    <FontIcon FontSize="15" Glyph="&#xE72C;"/>
+                    <ToolTipService.ToolTip>
+                        <ToolTip Content="Reload"/>
+                    </ToolTipService.ToolTip>
+                </Button>
+            </StackPanel>
+
+            <!-- URL Bar (visible by default) -->
+            <TextBox x:Name="UrlBar" Grid.Column="1" Margin="8,0" 
+                     PlaceholderText="Enter URL..." 
+                     KeyDown="UrlBar_KeyDown"
+                     VerticalAlignment="Center" 
+                     HorizontalAlignment="Stretch"/>
+
+            <!-- URL Bar Button (visible in compact mode) -->
+            <Button x:Name="UrlBarButton" Grid.Column="1" Margin="8,0"
+                    Visibility="Collapsed" 
+                    Height="40"
+                    HorizontalAlignment="Stretch">
+                <FontIcon  Glyph="&#xE721;"/>
+                <ToolTipService.ToolTip>
+                    <ToolTip Content="Address Bar"/>
+                </ToolTipService.ToolTip>
+                <Button.Flyout>
+                    <Flyout>
+                        <Border Background="#272727"
+                                BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}"
+                                BorderThickness="1"
+                                Padding="10"
+                                CornerRadius="4"
+                                Opacity="1"
+                                VerticalAlignment="Center" 
+                                HorizontalAlignment="Stretch">
+                            <TextBox x:Name="PopupUrlBar" Grid.Column="1" Margin="8,0" 
+                                    PlaceholderText="Enter URL..." 
+                                    KeyDown="UrlBar_KeyDown"
+                                    VerticalAlignment="Center" 
+                                    Width="300"/>
+                        </Border>
+                    </Flyout>
+                </Button.Flyout>
+            </Button>
+
+            <!-- Additional Buttons -->
+            <StackPanel Grid.Column="2" Orientation="Horizontal" Spacing="8">
+                <Button Width="40" Height="40">
+                    <FontIcon Glyph="&#xE734;" FontSize="15"/>
+                    <ToolTipService.ToolTip>
+                        <ToolTip Content="Bookmarks"/>
+                    </ToolTipService.ToolTip>
+                </Button>
+                <Button Width="40" Height="40">
+                    <FontIcon Glyph="&#xE80F;" FontSize="15"/>
+                    <ToolTipService.ToolTip>
+                        <ToolTip Content="Home"/>
+                    </ToolTipService.ToolTip>
+                </Button>
+                <Button Width="40" Height="40">
+                    <FontIcon Glyph="&#xE713;" FontSize="15"/>
+                    <ToolTipService.ToolTip>
+                        <ToolTip Content="Settings"/>
+                    </ToolTipService.ToolTip>
+                </Button>
+            </StackPanel>
+        </Grid>
+
+        <!-- WebView -->
+        <WebView2 x:Name="WebViewControl" Grid.Row="1"/>
+
+        <!-- Visual States for responsive design -->
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="WideView">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="600"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+                <VisualState x:Name="NarrowView">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="UrlBar.Visibility" Value="Collapsed"/>
+                        <Setter Target="UrlBarButton.Visibility" Value="Visible"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
     </Grid>
 </Page>

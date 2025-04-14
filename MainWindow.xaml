@@ -61,7 +61,7 @@
                         </NavigationViewItem.Icon>
                     </NavigationViewItem>
                     <NavigationViewItem Content="Accounts" Tag="Accounts" Icon="People" ToolTipService.ToolTip="Accounts" IsEnabled="False" />
-                    <NavigationViewItem Content="Browser" Tag="Browser" ToolTipService.ToolTip="Browser" IsEnabled="False">
+                    <NavigationViewItem Content="Browser" Tag="Browser" ToolTipService.ToolTip="Browser">
                         <NavigationViewItem.Icon>
                             <FontIcon Glyph="&#xF6FA;" />
                         </NavigationViewItem.Icon>
